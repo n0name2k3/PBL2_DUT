@@ -1,0 +1,5 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(498,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (C:\Users\ngthu\Documents\Bach Hoa DUT\ComputerGraphicsCourse\assignment__02\bin\intermediates\) contains files shared from another project (assignment_02.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+C:\Users\ngthu\Documents\Bach Hoa DUT\ComputerGraphicsCourse\assignment__02\assignment_02\src\main.cpp(575,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  assignment_02.vcxproj -> C:\Users\ngthu\Documents\Bach Hoa DUT\ComputerGraphicsCourse\assignment__02\bin\Debug\PBL2.exe
