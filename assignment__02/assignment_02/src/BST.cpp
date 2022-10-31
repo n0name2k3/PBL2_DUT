@@ -31,6 +31,7 @@ int BST::getLevel(int x) {
 }
 
 int BST::count = 0;
+int BST::count1 = 0;
 
 int BST::insert(int x) {
 	count += 1;
@@ -63,7 +64,18 @@ int BST::insert(int x) {
 }
 
 int BST::returnCount() {
-	return BST::count;
+	return _returnCount(root);
+}
+
+int BST::_returnCount(Node* node) {
+	
+		if (node == NULL) {
+			return 0;
+		}
+		else {
+			return 1 + _returnCount(node->left) + _returnCount(node->right);
+		}
+	
 }
 
 void BST::print() {
@@ -139,6 +151,7 @@ void BST::print__RNL(Node* node) {
 void BST::print__NLR(Node* node) {
 	if (node) {
 		{
+			//count += 1;
 			cout << node->data << " "; // xu?t d? li?u trong node
 			print__NLR(node->left); // duy?t qua trái
 			print__NLR(node->right); // duy?t qua ph?i
@@ -208,7 +221,7 @@ Node* BST::findMax__private(Node* node) {
 }
 
 void BST::deleteNode(int x) {
-	count -= 1;
+	//count -= 1;	
 	Node* currNode = root;
 	Node* r = root;
 

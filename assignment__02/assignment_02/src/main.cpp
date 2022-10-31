@@ -626,15 +626,15 @@ bool Button::checkForMouseClick(int mouseX, int mouseY) {
 }
 
 
-//void print__LRN(Node* node) {
-//	if (node) {
-//		{
-//			print__LRN(node->left); // duy?t qua trái
-//			print__LRN(node->right); // duy?t qua ph?i
-//			cout << node->data << "  "; // xu?t giá tr? c?a node
-//		}
-//	}
-//}
+void print__LRN(Node* node) {
+	if (node) {
+		{
+			print__LRN(node->left); // duy?t qua trái
+			print__LRN(node->right); // duy?t qua ph?i
+			cout << node->data << "  "; // xu?t giá tr? c?a node
+		}
+	}
+}
 
 
 int AddToArray(Node* node, int arr[], int i)
@@ -695,10 +695,9 @@ void Button::buttonClicked() {
 
 	else if (name == "AVL") {
 		r = NULL;
-		l = tree.returnCount();
 		int arr[100];
 		AddToArray(tree.returnVal(), arr, 0);
-		for (int i = 0; i < l; i++) {
+		for (int i = 0; i < tree.returnCount(); i++) {
 			//cout << arr[i] << endl;
 			r = avl.insert(r, arr[i]);
 		}
@@ -724,6 +723,7 @@ void Button::buttonClicked() {
 				r = avl.insert(r, arr1[i]);
 			}
 			//print__LRN(r);
+			//cout << tree.returnCount()<< endl;
 			closeAllModals();
 		}
 			
@@ -739,6 +739,7 @@ void Button::buttonClicked() {
 				r = avl.insert(r, arr2[i]);
 			}
 			//print__LRN(r);
+			//cout << tree.returnCount() << endl;
 			closeAllModals();
 		}
 			

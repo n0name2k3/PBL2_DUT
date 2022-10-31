@@ -4,10 +4,13 @@ class BST {
 public:
 	BST();
 	static int count;
+	static int count1;
 	Node* root;
 	int insert(int x);
 	int getLevel(int x);
 	int returnCount();
+	int left_height(Node* node);
+	int right_height(Node* node);
 	void print();
 	void printNLR();
 	void printNRL();
@@ -22,6 +25,7 @@ public:
 	void update();
 	void draw();
 private:
+	int _returnCount(Node* node);
 	void print__private(Node* node);
 	void print__NLR(Node* node);
 	void print__NRL(Node* node);
